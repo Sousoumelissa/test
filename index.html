@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tout Droit - Réseau d'entrepreneurs</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --violet: #6c4cff;
+      --bleu-nuit: #0f172a;
+      --orange: #ff7a18;
+      --gris: #f1f5f9;
+      --text-principal: #111827;
+      --text-secondaire: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--gris), #ffffff);
+      color: var(--text-principal);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--bleu-nuit), var(--violet));
+      color: white;
+      padding: 3rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    header p {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .contenu {
+      max-width: 1100px;
+      margin: -3rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .carte {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--orange), var(--violet));
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 25px -12px rgba(255, 122, 24, 0.5);
+    }
+
+    .section-titre {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      margin-bottom: 1.5rem;
+      color: var(--bleu-nuit);
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      color: var(--text-secondaire);
+      margin-bottom: 1.75rem;
+    }
+
+    .evenements {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .event {
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 1.75rem;
+      background: linear-gradient(135deg, rgba(255, 122, 24, 0.08), rgba(108, 76, 255, 0.12));
+    }
+
+    .event h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .event .details {
+      font-size: 0.95rem;
+      color: var(--text-secondaire);
+      margin-bottom: 0.9rem;
+    }
+
+    .event strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--bleu-nuit);
+    }
+
+    .quote {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(108, 76, 255, 0.95));
+      color: white;
+      border-radius: 18px;
+      padding: 2rem;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote::before {
+      content: "\201C";
+      font-size: 6rem;
+      position: absolute;
+      top: -1rem;
+      left: 1rem;
+      opacity: 0.2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      color: var(--text-secondaire);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      .carte {
+        padding: 2rem;
+      }
+
+      header {
+        padding: 2.5rem 1rem 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue chez Tout Droit</h1>
+    <p>
+      Ici, on connecte les entrepreneurs des quartiers populaires qui ont des rêves, des plans et l’envie de les réaliser.
+      On avance ensemble, on partage nos ressources, nos galères comme nos victoires, et surtout on prépare les prochains
+      rendez-vous pour que tu puisses passer à l’action.
+    </p>
+  </header>
+
+  <main class="contenu">
+    <section class="carte">
+      <h2 class="section-titre">Ce qu’on fait ensemble</h2>
+      <p class="intro">
+        Tout Droit, c’est un réseau à taille humaine, ancré dans nos QPV, où chacun arrive avec son parcours et ses idées.
+        Tu lances ton projet ou tu cherches à level up&nbsp;? Tu trouveras toujours quelqu’un pour te filer un coup de main,
+        partager un bon plan ou t’ouvrir un nouveau contact.
+      </p>
+      <a class="cta" href="#inscription">Je veux être tenu·e au courant</a>
+    </section>
+
+    <section class="carte">
+      <h2 class="section-titre">Les prochains événements</h2>
+      <p class="intro">
+        Nos rencontres sont là pour t’apporter du concret&nbsp;: des ateliers, des retours d’expérience, des collaborations
+        qui démarrent autour d’un café. Réserve vite ta place, les sessions partent vite&nbsp;!
+      </p>
+      <div class="evenements">
+        <article class="event">
+          <h3>Atelier Pitch &amp; Posture</h3>
+          <p class="details">Jeudi 18 avril · 18h30 · MJC du Centre</p>
+          <strong>Ce que tu vas kiffer</strong>
+          <p>Apprendre à pitcher ton projet sans stress, avec coaching express de la team Tout Droit.</p>
+          <a class="cta" href="#inscription">Je réserve ma place</a>
+        </article>
+        <article class="event">
+          <h3>Clinic Financement</h3>
+          <p class="details">Mardi 7 mai · 19h · Pépinière Horizon</p>
+          <strong>Ce que tu vas kiffer</strong>
+          <p>Décortiquer les aides, subventions et prêts solidaires avec des pros qui parlent le même langage que toi.</p>
+          <a class="cta" href="#inscription">Je réserve ma place</a>
+        </article>
+        <article class="event">
+          <h3>Brunch Réso &amp; Chill</h3>
+          <p class="details">Dimanche 26 mai · 11h · Café du Quartier</p>
+          <strong>Ce que tu vas kiffer</strong>
+          <p>Un moment détente pour créer des connexions, découvrir d’autres projets et lancer des collabs.</p>
+          <a class="cta" href="#inscription">Je réserve ma place</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="carte quote">
+      <p>
+        «&nbsp;On sait d’où on vient et on sait où on va. Tout Droit, c’est le boost collectif qui nous permet d’avancer,
+        de sortir du lot et de créer des opportunités dans nos quartiers.&nbsp;»
+      </p>
+    </section>
+
+    <section id="inscription" class="carte">
+      <h2 class="section-titre">Reste dans la boucle</h2>
+      <p class="intro">
+        Laisse-nous ton e-mail et ton quartier. On t’enverra les prochains événements, les ressources à ne pas rater et
+        les petites surprises réservées à la communauté.
+      </p>
+      <form>
+        <label for="prenom">Prénom</label>
+        <input id="prenom" name="prenom" type="text" placeholder="Ton prénom" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="tonmail@example.com" required>
+
+        <label for="quartier">Quartier</label>
+        <input id="quartier" name="quartier" type="text" placeholder="Où tu entreprends" required>
+
+        <button type="submit" class="cta">Je rejoins la liste</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tout Droit · Réseau des entrepreneurs des quartiers populaires</p>
+    <div class="footer-links">
+      <a href="mailto:contact@toutdroit.co">contact@toutdroit.co</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <style>
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--bleu-nuit);
+    }
+
+    input {
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      border: 1px solid #cbd5f5;
+      font-size: 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--violet);
+      box-shadow: 0 0 0 4px rgba(108, 76, 255, 0.15);
+    }
+  </style>
+</body>
+</html>
